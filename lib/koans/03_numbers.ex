@@ -51,7 +51,7 @@ defmodule Numbers do
 
   koan "Let's grab the individual digits in a list" do
     individual_digits = Integer.digits(58_127)
-    assert individual_digits == ___
+    assert individual_digits == [5,8,1,2,7]
   end
 
   koan "Oh no! I need it back together" do
