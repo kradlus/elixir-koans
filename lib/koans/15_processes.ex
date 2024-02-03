@@ -1,4 +1,5 @@
 defmodule Processes do
+  @moduledoc false
   use Koans
 
   @intro "Processes"
@@ -88,9 +89,13 @@ defmodule Processes do
 
     send(pid, {:hello, self()})
 
-    timeout = 100 # ms
-    failure_message = "Sorry, I didn't get the right message. Look at the message that is sent back very closely, and try again"
-    assert_receive _, timeout, failure_message
+    # ms
+    timeout = 100
+
+    failure_message =
+      "Sorry, I didn't get the right message. Look at the message that is sent back very closely, and try again"
+
+    assert_receive ___, timeout, failure_message
   end
 
   def yelling_echo_loop do
